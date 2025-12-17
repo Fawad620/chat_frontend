@@ -49,7 +49,7 @@ export default function App() {
     setIsTyping(true);
     const API_URL = import.meta.env.VITE_API_URL;
     try {
-      const res = await fetch("https://backend-ye1w.vercel.app//api/chat", {
+      const res = await fetch("https://nonpopulous-kaia-prickly.ngrok-free.dev/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMsg.text }),
