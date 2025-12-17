@@ -49,7 +49,7 @@ export default function App() {
     setIsTyping(true);
 
     try {
-      const res = await fetch("http://localhost:4005/api/chat", {
+      const res = await fetch("backend-lc5h.vercel.app", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMsg.text }),
