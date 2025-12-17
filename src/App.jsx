@@ -47,9 +47,9 @@ export default function App() {
     setMessages((prev) => [...prev, userMsg]);
     setInput("");
     setIsTyping(true);
-
+    const API_URL = import.meta.env.VITE_API_URL;
     try {
-      const res = await fetch("backend-lc5h.vercel.app", {
+      const res = await fetch("https://backend-lc5h.vercel.app//api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMsg.text }),
